@@ -3,7 +3,7 @@ import React from "react";
 const Institute = () => {
     return(
         <>
-            <h1>Institute Name:</h1>
+            <h1>Institute:</h1>
         </>
     );
 }
