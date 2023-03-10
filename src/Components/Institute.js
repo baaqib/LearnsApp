@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import apiClient from "./http-common";
 
 const Institute = () => {
-    const [result, setResult] = useState([]);
+    const [result, setResult] = useState({});
     async function getInstitute() {
         try {
             const res = await apiClient.get("/Institute/GetInstitute");
