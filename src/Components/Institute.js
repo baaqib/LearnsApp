@@ -28,6 +28,23 @@ const Institute = () => {
     }
   }
 
+  async function addInstitute() {
+    
+    const postData = {
+        name: 'bon'
+    }
+    try {
+        const re = await apiClient.post(`/Institute/AddInstitute`,postData, {
+            headers: {
+              "x-access-token": "token-value",
+            },});
+        console.warn(re.data);
+        //setResul(re.data);
+      } catch (err) {
+        console.warn(err);
+      }
+  }
+
   return (
     <>
       <h1>Institute:</h1>
@@ -41,6 +58,7 @@ const Institute = () => {
       <h1>{resul.name}</h1>
       <button onClick={getInstitute}>getit</button>
       <button onClick={getInstituteByID}>getInstituteByID</button>
+      <button onClick={addInstitute}>addInstitute</button>
     </>
   );
 };
